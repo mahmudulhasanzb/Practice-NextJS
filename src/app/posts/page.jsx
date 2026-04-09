@@ -8,7 +8,11 @@ const PostsPage = () => {
 
   return (
     <div>
-      <Suspense fallback={<div className="text-2xl">Loading...</div>}>
+      <Suspense fallback={
+        <div className='flex justify-center items-center h-screen'>
+          <span className="loading loading-spinner text-primary"></span>
+        </div>
+      }>
         <Posts postsPromise={postsPromise}></Posts>
       </Suspense>
     </div>

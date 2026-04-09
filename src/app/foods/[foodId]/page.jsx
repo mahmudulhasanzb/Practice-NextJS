@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 const FoodDetailsPage = async ({params}) => {
@@ -8,28 +9,33 @@ const FoodDetailsPage = async ({params}) => {
   const food = data.data;
 
   return (
-    <div>
-      <div className="card bg-base-100 shadow-sm relative">
-      <div className="card-body">
-        <h2 className="card-title">
-          {food.dish_name}
-          <div className="badge badge-secondary">New</div>
-        </h2>
+    <div className='my-10'>
+      <div className="card bg-info shadow-sm shadow-amber-500 max-w-4xl mx-auto">
+        <div className="card-body">
+          <h2 className="card-title">
+            {food.dish_name}
+            <div className="badge badge-secondary">New</div>
+          </h2>
 
-        <p>Price {food.price}</p>
-        <div className="card-actions justify-start">
-          <div className="badge badge-outline">{food.category}</div>
+          <p>Price {food.price}</p>
+          <div className="card-actions justify-start">
+            <div className="badge badge-outline">{food.category}</div>
+          </div>
+          <div className='my-2'>
+            <h1 className='text-2xl font-bold my-2'>Main Ingredients:</h1>
+            {food.main_ingredients.map(ingredient => (
+              <div key={ingredient}>
+                <span className='badge badge-outline'>{ingredient}</span>
+              </div>
+            ))}
+          </div>
+          <div className='my-2'>
+            <h1 className='text-2xl font-bold my-2'>Cooking Steps:</h1>
+            <p className='text-lg'>{food.cooking_steps}</p>
+          </div>
+          <Link href="/foods" className='btn btn-primary w-full'>Back</Link>
         </div>
-        <p>
-            {food.description} Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde repudiandae praesentium, culpa nihil nisi et! Velit odio, adipisci explicabo et cumque eius amet dignissimos cum
-            <br /> inventore ratione, optio incidunt beatae!
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, architecto earum non <br /> suscipit impedit maxime nihil placeat voluptatibus modi voluptatum! Amet quo rem magni dolorum officiis tempore distinctio doloribus praesentium?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, tempora. Dolor, temporibus. Quas, tempora. Dolor, temporibus. Quas, <br /> tempora. Dolor, temporibus. Quas, tempora. Dolor, temporibus. Quas, tempora. Dolor, temporibus.
-            <br />
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, tempora. Dolor, temporibus. Quas, tempora. Dolor, temporibus. Quas, tempora. Dolor, temporibus. Quas, tempora. Dolor, temporibus. Quas, tempora. Dolor, temporibus.
-        </p>
       </div>
-    </div>
     </div>
   );
 };
