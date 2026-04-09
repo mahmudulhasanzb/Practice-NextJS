@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 const page = () => {
@@ -11,7 +12,7 @@ const page = () => {
             <p className="py-6 whitespace-pre-wrap">
               This is the home page of your practice application. Enjoy building great things!
             </p>
-            <button className="btn btn-primary">Get Started</button>
+            <Link href="/foods" className="btn btn-primary">Get Started</Link>
           </div>
         </div>
       </div>
