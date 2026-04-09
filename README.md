@@ -34,3 +34,14 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## 🚀 What I'm Learning & Exploring
+
+In this practice project, I am exploring the foundational concepts of modern Next.js development, including:
+- **App Router:** Understanding the new `app/` directory structure and file-based routing.
+- **Server Components & Data Fetching:** Fetching data in server components.
+- **Component Architecture:** Building reusable components like `FoodCard` and `Posts`.
+- **Styling & Layouts:** Implementing responsive designs and shared layouts.
+- **Optimizations:** Working with Next.js built-in optimizations like `next/font` for better performance.
+
+This repository serves as a hands-on playground to solidify my understanding of the Next.js ecosystem!
